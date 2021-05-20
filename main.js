@@ -24,21 +24,21 @@ objects.push(new Option(options[0], options[2]))
 objects.push(new Option(options[1], options[0]))
 objects.push(new Option(options[2], options[1]))
 let userInput = argv.move
-console.log('Playing a game of roshambo against the computer')
-console.log(`Player plays ${userInput}`)
+console.log('Playing a game of roshambo against the computer.')
+console.log(`Player plays ${userInput}!`)
 let rand = Math.random() * 3
 rand = Math.floor(rand)
 const compInput = options[rand] 
-console.log(`Computer plays ${compInput}`)
+console.log(`Computer plays ${compInput}!`)
 const userObj = objects[options.indexOf(userInput)]
 const compObj = objects[rand]
 const result = userObj.doIBeat(compObj)
 if (result === 'tie') {
-    console.log('You tied')
+    console.log('~You tied.~')
 } else if (result) {
-    console.log('~You win~')
+    console.log('~You win.~')
 } else {
-    console.log('~Computer wins~')
+    console.log('~Computer wins.~')
 }
 
 
